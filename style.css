@@ -1,0 +1,444 @@
+* {
+  /*  Sert à réinitialiser les marges par défaut des navigateurs. */
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /*pour effacer les puces */
+}
+
+.fa {
+  font-size: 1.5em;
+}
+
+a:hover {
+  color: #fefcf3;
+}
+span {
+  font-style: oblique;
+}
+ul > a {
+  text-decoration: none;
+  margin: auto;
+}
+
+p a,
+table a {
+  color: inherit;
+}
+
+body {
+  animation: fadeInAnimation ease 1.5s;
+  background: url(images/pellicule.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  max-width: 150px;
+}
+
+h1 {
+  font-size: 2.2em;
+  text-align: center;
+  background-image: linear-gradient(#645caa, #a084ca);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-family: "Playball";
+  margin-top: 2%;
+  margin-bottom: 5%;
+  user-select: none;
+}
+section {
+  margin: 50px;
+}
+section > h1 {
+  margin: 10px;
+}
+
+hr {
+  background: linear-gradient(to right, #645caa, #fefcf3);
+  height: 1px;
+  border-radius: 10px;
+  width: 70%;
+  margin: 20px auto auto auto;
+}
+.hrFooter {
+  width: auto;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 5%;
+}
+
+.imgCover {
+  height: 100%;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 15px;
+  box-shadow: FEFCF3 0px 0px 15px 2px;
+  transform: scale(1);
+  transition-property: transform box-shadow;
+  transition-duration: 300ms;
+}
+/* zoom home */
+.imgCover:hover {
+  transform: scale(1.1);
+  box-shadow: #ebc7e8 0px 0px 15px 2px;
+}
+.imTooltip:hover {
+  cursor: help;
+}
+.films {
+  animation: fadeInAnimation ease 1.5s;
+  background: url(images/scene.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.imgPin {
+  box-shadow: #fefcf3 0px 0px 10px 2px;
+  border-radius: 10px;
+}
+
+td > img {
+  max-width: 150px;
+  margin: 0;
+  display: block;
+}
+
+.header {
+  height: 30%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px;
+}
+.navbar {
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+
+ul {
+  color: #fefcf3;
+  display: flex;
+  height: 50px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+li {
+  font-size: 1.2em;
+  padding: 1rem 0rem 1.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fefcf3;
+  min-width: 80px;
+  margin: auto;
+  font-family: "Playball";
+  user-select: none;
+}
+
+li:hover {
+  transition: 0.2s all;
+  color: #645caa;
+  cursor: pointer;
+}
+
+.menuSelected {
+  color: #645caa;
+  text-decoration: underline;
+}
+p[class="textSynopsis"] {
+  text-align: center;
+  margin: 5% 15% 0 15%;
+  line-height: 1.5em;
+  font-family: "Playball";
+  font-size: 1.2em;
+  color: #a084ca;
+  text-shadow: black 1px 0px 10px;
+  user-select: none;
+}
+
+table {
+  width: auto;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#tableSynopsis {
+  border: 1px solid #fefcf3;
+  margin-right: 20px;
+}
+
+td,
+th,
+caption {
+  border: 1px solid #fefcf3;
+  color: #bface0;
+  padding: 5px;
+  text-align: center;
+  font-family: "Playball";
+  font-size: 1.2em;
+}
+caption {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 1.4em;
+  border: 1px solid #fefcf3;
+  border-bottom: 0;
+}
+
+.tableBodySyn th {
+  border: 0;
+  text-align: left;
+}
+
+.tableBodySyn td {
+  border: 0;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+th {
+  color: #bface0;
+}
+
+td {
+  font-size: 1.5em;
+}
+
+figcaption {
+  font-size: 0.8em;
+  text-decoration: underline;
+  color: #ebc7e8;
+  min-width: 100px;
+}
+
+.divDoublage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.containerFooter {
+  color: #ebc7e8;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 50px;
+  grid-template-areas:
+    "a b"
+    "c b"
+    "d d";
+}
+
+.box1 {
+  grid-area: a;
+  justify-self: center;
+  width: 100px;
+  height: 28px;
+  padding: 5px;
+}
+.box2 {
+  grid-area: b;
+  justify-self: center;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+.box3 {
+  grid-area: c;
+  justify-self: center;
+  width: 70px;
+  height: 35px;
+  padding: 5px;
+}
+.box4 {
+  grid-area: d;
+  justify-self: center;
+  padding: 5px;
+  text-shadow: black 1px 0px 10px;
+  position: relative;
+  bottom: 5px;
+}
+
+.divVideo {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  height: 330px;
+}
+
+@media screen and (max-width: 600px) {
+  .divVideo {
+    height: 240px;
+  }
+}
+
+.divSynopsis {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: auto;
+  justify-content: center;
+  width: auto;
+}
+
+.etoiles {
+  margin: 25px 0 0px;
+  font-size: 0;
+  white-space: nowrap;
+  display: inline-block;
+  width: 175px;
+  height: 35px;
+  overflow: hidden;
+  position: relative;
+  background: url(images/etoile.svg);
+  background-size: contain;
+}
+.etoiles i {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  background: url(images/etoilejaune.svg);
+  background-size: contain;
+}
+.etoiles input {
+  opacity: 0;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+.etoiles input:hover + i,
+.etoiles input:checked + i {
+  opacity: 1;
+}
+.etoiles i ~ i {
+  width: 40%;
+}
+.etoiles i ~ i ~ i {
+  width: 60%;
+}
+.etoiles i ~ i ~ i ~ i {
+  width: 80%;
+}
+.etoiles i ~ i ~ i ~ i ~ i {
+  width: 100%;
+}
+
+.hrAvis {
+  height: unset;
+  width: unset;
+  margin: 20px 0px;
+}
+
+#avis {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: #fefcf3 0px 0px 10px 2px;
+
+}
+.divAvis{
+  text-align: center;
+}
+
+.pAvis{
+  color:  #a084ca;
+  text-align: center;
+  font-family: "Playball";
+  font-size: 1.3em;
+}
+textarea{
+  max-width: 390px;
+  min-width: 390px;
+  max-height: 160px;
+  size: 200;
+  padding: 5px;
+}
+
+form label{
+  font-family: "Playball";
+  color: #bface0;
+  font-size: 1.1em;
+}
+
+.inputAvis{
+  position: relative;
+  font-family: "Playball";
+  font-size: 1.1em;
+  margin-top: 1px;
+  background : #645caa;
+  color: #fefcf3;
+  padding:7px;
+  border:0";
+}
+
+.inputButtonAvis{
+margin: 5px;
+width: 86px;
+height: 30px;
+}
+
+.animationwiggle{
+  animation: wiggle 2s linear infinite;
+}
+
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+input:hover{
+  cursor: pointer;
+}
+
